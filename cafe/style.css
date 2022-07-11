@@ -1,0 +1,488 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+--clr-accent:rgb(203, 140, 84)
+}
+body {
+  color: seashell;
+  text-align: center;
+  background-color: black;
+  margin: 0%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-seri}
+
+li, a, button{
+  color: seashell;
+  font-family:'Montserrat', sans-serif; 
+  font-weight: 500;
+  font-size: 1.20rem;
+  text-decoration: none; 
+}
+/* header*/
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 10%;
+  border-bottom: 3px solid rgb(189, 130, 78);
+  flex-wrap: wrap;
+  flex-basis:calc(calc(500px -100%)*999) ;
+  flex-grow: 1;
+}
+
+ul li {
+  margin-right: auto;
+  display: inline-flex;
+  list-style:none;
+  padding: 0 25px;
+  margin-right: .5rem;
+  
+}
+
+nav li a{
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  
+}
+.cta :hover{
+  background-color: black;
+  
+}
+nav li:hover{
+  background-color:var(--clr-accent) ;
+
+}
+button{
+  padding: 9px 15px;
+  border: none;
+  border-radius: 50px;
+  background:var(--clr-accent);
+  cursor: pointer;
+  
+}
+
+@keyframes button{
+  from{ background-color: seashell;}
+  to { background-color:brown;}
+}
+button:hover{
+  animation-name: button;
+  animation-duration: 2s;
+  background-color: seashell;
+  color: black;
+}
+
+.toggle-button{
+  position:absolute;
+  top: 3.3rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media(max-width: 750px){
+  .toggle-button{
+    display: flex;
+  }
+   .navlinks{
+    display: none;
+   }
+  
+   
+  header{
+    flex-direction: column;
+    
+  }
+  .navlinks ul{
+  
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .cta{
+    margin-top: .7rem;
+
+  }  
+  
+  .navlinks.active{
+   display: flex;
+}
+}
+
+
+.logo {
+  color:var(--clr-accent);
+  font-family: 'MonteCarlo', sans-serif;
+  margin-right: auto;
+  font-size: 3rem;
+}
+
+
+
+.main {
+  margin: auto;
+  height: 500px;
+  position: relative;
+  padding-top: 70px;
+  background-position: center;
+  background-image: url(cafimage/kebab\ platter.webp);
+  animation:image 7s infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 20px black;
+  position: relative;
+}
+/*text in a picture*/
+.main-text{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin:5% 25%;}
+ .text h4 {
+  font-size: 2rem;
+  color: antiquewhite;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ } 
+ 
+@keyframes image {
+  from{ background-image: url(cafimage/Umut-Ocakbasi-Restaurant.webp);}
+
+  to {background-image: url(cafimage/kebab\ platter.webp);
+}
+
+
+   
+ 
+}
+ h4{
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-size: 1.5rem;
+
+}
+/* Welcome text part*/
+.welcome{ 
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+ .description{
+ width: 600px;;  
+ margin: 2% 2% 3% 2% ;             
+ font-size: 1.5em;
+ font-family: MOn;
+ 
+ }
+ .description h2{
+   margin-bottom: 10px;   
+  color: rgb(189, 130, 78);
+ }
+/*Picture*/
+.pictures {
+ margin-top: 0;
+ display:flex;
+ justify-content: space-evenly;
+ flex-wrap: wrap;
+ flex: 1;
+}
+
+.item img {
+  width: 350px;
+  height: 250px;
+  border-radius: 5%;
+}
+.kebab{
+  display: flex;
+  justify-content: center;
+  /* height: 100vh; */
+  width: 100vw;
+  align-items: center;
+  position: relative;
+  border-bottom: 5px solid rgb(189, 130, 78);
+}
+ .kebab::before{
+  content: "";
+  display: flex;
+  position: absolute;
+  max-width: 100%;
+  background-position: center;
+  background-image: url(cafimage/kebab\ platter.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top:0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5
+} 
+
+.glassmorphism{
+  position: relative;
+  height: 60vh;
+  max-width: 45%;
+  display: flex; 
+  margin: 15%;   
+  backdrop-filter: blur(5px) saturate(130%);
+  -webkit-backdrop-filter: blur(5px) saturate(130%);
+  background-color: rgba(20, 19, 19, 0.41);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  
+}
+.booknow{
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20% 1rem;
+
+}
+.booknow h5{ 
+margin: 2%; 
+font-size: 1.15rem;
+
+}
+.bookbuttin{
+  margin: 0 auto
+}
+
+/*footer*/
+footer{
+  padding: 7% 0;
+  display: flex;
+  justify-content: space-around;
+  background-color:rgb(225, 220, 216); 
+  color: rgb(189, 130, 78);
+  font-size: 1.25rem;
+  text-align: start;
+} 
+footer span{
+  font-weight: bold;
+  text-decoration-line: underline;
+  color: rgb(189, 130, 78)
+}
+
+footer h6{
+  padding: 5% 0px;
+  font-size: 1.15rem;
+  color: black;
+}
+.address{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  justify-content: center;
+  align-items: start
+  
+  ;
+
+}
+
+   /* about section */
+
+   .gallery{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0 auto;
+   }
+    .images img{
+      border-radius: 10px;
+      width: 450px;
+      height: 300px;}
+
+    .btnbook{
+      margin: 5rem;
+    
+
+    }
+    
+    .main-about {
+  margin: auto;
+  height: 500px;
+  position: relative;
+  padding-top: 70px;
+  background-position: center;
+  background-image: url(cafimage/mese.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 20px black;
+  position: relative;}
+  
+  
+
+
+/* Menu part*/
+#mainbox{
+  margin: 3% 0 7% 0;
+}
+
+.menupictures{
+  margin: 0 auto;
+  width: 85%;
+  display: flex;
+  flex-wrap:wrap;
+  flex:1;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu-items{
+  padding: 2%;
+}
+.image-box{
+  z-index: 2;
+  position: relative;
+  width: 370px; 
+  height: 300px;
+  background-color: rgb(189, 130, 78);;
+
+} 
+
+
+.menu-items img {
+  padding-top:10px;
+  position: relative;
+  width: 350px;
+  height: 250px;
+  border-radius: 2%;
+}
+
+/* Menu details */
+.all-menu{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;}
+
+.all-menu :hover{
+  color: var(--clr-accent)
+}   
+  
+
+.item-name {
+  margin-top:  3rem;
+  margin-bottom: 7rem;
+}
+
+.menu-names{
+  display: block;
+  text-align: start;
+  font-size: 1.7rem;  
+  border-bottom: 1px dotted var(--clr-accent);
+  padding-top:3rem; 
+  width: 70%;
+  margin: 0 auto;
+}
+.item-name h1{
+  color: var(--clr-accent);
+} 
+
+@media(min-width :800px){
+.menu-names{
+
+align-items:flex-start;
+display: flex;
+justify-content: space-between;
+flex-basis: 250px;
+flex-wrap: wrap;
+text-align: left;
+}}
+
+/*BOOK Table part*/
+/* book table text */
+.m-text {
+  font-size: 1.25rem;
+  margin-bottom: 3%;
+}
+.m-text h1{
+  margin:1rem;
+
+}
+.hidden {
+  display: none;
+}
+.message h5{
+  margin: 1rem auto;
+  color: red;
+  font-size: 2.25rem;
+}
+.booktb{
+  margin: 2%;}
+
+form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+   color: rgb(189, 130, 78);
+  backdrop-filter: blur(6px) saturate(118%);
+  -webkit-backdrop-filter: blur(6px) saturate(118%);
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  margin-bottom: 10%;
+}
+
+.form-group{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3%;
+  justify-content: space-between;
+  text-align: left;
+  padding: 2%;
+  
+
+}
+
+input{
+  margin-left: 0;
+  width: 65%; 
+  padding: 1.5%;
+  border: 1px solid rgb(203, 140, 84);
+  border-radius: 10px;
+}
+input :focus{ background-color: aquamarine;
+
+}
+label{
+  font-size: 1.25rem;}
+
+
+#submit{
+  margin:0 auto; 
+  margin-bottom: 5%;
+  border-radius: 10px;
+  
+
+}
+ 
+
+
+
+input[type=submit] {
+  width: fit-content;
+  color: black;
+  padding: 12px 45px;
+  
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgb(189, 130, 78);
+}
+
+input[type=submit]:hover {
+  background-color: #ebf0eb;
+} 
