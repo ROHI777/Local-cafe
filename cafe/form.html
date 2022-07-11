@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Misto Kebab</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montserrat:wght@500&family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montserrat:wght@500&family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+     <header>
+      <h2 class="logo">Misto Kebab</h2>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <nav class="navlinks">
+        <ul>
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="menu.html"> Menu </a></li>
+          <li><a href="about.html"> About Us</a></li>
+          <a class="cta" href="form.html"><button>Book a table</button></a> </li>
+      </ul>
+      </nav>
+      
+    </header>
+    <div class="m-text">
+      <h1>Book a Table</h1>
+    </div>
+    <div class=" message hidden">
+      <h5>Thank you for booking  a table!</table></h5>
+    </div>
+    <form  id ='myForm 'action="mailto:rakhat0509@gmail.com" method="post" onsubmit="myFunction()">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          placeholder=""
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="text" name="phone" id="phone" minlength="11" required />
+      </div>
+      <div class="form-group">
+        <label for="guest">Number of guests</label>
+        <input type="number" name="guest" id="guest" min="0" />
+      </div>
+      <div class="form-group">
+        <label for="date">Date and Time</label>
+        <input type="datetime-local" name="date" id="date" />
+      </div>
+      <div class="form-group">
+        <div id="submit">
+          <input type="submit" id="submit" value="Book Now" mailto="rakhat0509@gmail.com" />
+        </div>
+      </div>
+    </form>
+    <footer>
+      <div class="address">
+        <h4>Contact Us</h4>
+        <h6>
+          <span> Address</span>
+          329 West Green Road London N15 3PB
+        </h6>
+        <h6>
+          <span>Phone</span>
+          07436056613
+        </h6>
+        <h6>
+          <span>Email</span>
+          mistokebab@gmail.com
+        </h6>
+      </div>
+      <div class="map">
+        <h4>Find a restaurant</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.041336527607!2d-0.09445938425995293!3d51.5858057796481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761c09b30632c5%3A0xdcb7a48eea3bb664!2sW%20Green%20Rd%2C%20London%20N15%203PB!5e0!3m2!1sen!2suk!4v1650843813170!5m2!1sen!2suk"
+          width="200"
+          height="150"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="OpenTimes">
+        <h4>Opening times</h4>
+        <h6>
+          Monday: 10.00-00.00 <br />
+          Tuesday: 10.00-00.00 <br />
+          Wednesday: 10.00-00.00 <br />
+          Thursday: 10.00-00.00 <br />
+          Friday: 10.00-00.00 <br />
+          Saturday: 10.00-00.00 <br />
+          Sunday: 11.00-23.00 <br />
+        </h6>
+      </div>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
